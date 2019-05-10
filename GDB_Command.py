@@ -14,9 +14,12 @@ gdb.execute('load')
 # p = subprocess.Popen(['./USB_Sample data.txt'],shell = True)
 # os.system('./USB_Sample data.txt')
 
+p = subprocess.Popen(['./GPIO_Interrupt timestamp.txt'],shell = True)
+time.sleep(1.5)
 # time.sleep(0.1)
 gdb.execute('monitor resume') # 这个跑到USB传输程序前面了
 # p.poll()
+p.wait()
 gdb.execute('set confirm off') # 关闭请求询问，让推出跳过yes/No
 gdb.execute('quit')
 # os._exit(0)
