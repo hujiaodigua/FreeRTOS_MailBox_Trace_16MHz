@@ -20,6 +20,6 @@ time.sleep(1)
 # tn.write("flash write_image erase /home/pi/Downloads/MailBox_16MHz/MailBox.elf\n".encode('utf-8'))
 # time.sleep(1)
 time.sleep(15)
-tn.write("exit\n".encode('utf-8'))
+tn.write("exit\n".encode('utf-8'))    # 在OpenOCD中看到dropped 'telnet' connection证明这条语句执行成功，证明Run的两个线程运行正确
 time.sleep(1)
 # p.wait()
